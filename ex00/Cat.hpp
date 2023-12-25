@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:49 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/23 17:54:48 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/26 00:01:31 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "Animal.hpp"
 
-class Cat : Animal
+class Cat : virtual public Animal
 {
     private:
         
@@ -24,6 +24,7 @@ class Cat : Animal
         Cat(std::string);
         Cat(const Cat& Copy);
         Cat& operator=(const Cat& Copy);
+        virtual void    makeSound() const;
         ~Cat();
 };
 #endif
