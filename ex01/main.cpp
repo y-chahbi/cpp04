@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 17:39:44 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/26 00:35:26 by ychahbi          ###   ########.fr       */
+/*   Created: 2023/12/21 13:31:07 by ychahbi           #+#    #+#             */
+/*   Updated: 2023/12/26 02:39:39 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
+#include "Dog.hpp"
 #include "Cat.hpp"
+#include "Brain.hpp"
 
-Cat::Cat(){
-    std::cout << "Cat Constructors is Called" << std::endl;
-    setType("Cat");
-}
-
-Cat::Cat(std::string name) : Animal(name){}
-
-Cat::Cat(const Cat& Copy){ *this = Copy; }
-
-void    Cat::makeSound() const
+int main()
 {
-    std::cout << "Meaw" << std::endl;
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    delete j;//should not create a leak
+    delete i;
+    return 0;
 }
-
-Cat& Cat::operator=(const Cat& Copy) {new(this) Cat(Copy);return (*this);}
-
-Cat::~Cat(){std::cout << "Cat Destructors Called" << std::endl;}
