@@ -6,15 +6,16 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 10:10:53 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/04 10:45:21 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/05 09:14:07 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 #define ICHARACTER_HPP
 
-#include "AMateria.hpp"
-
+// #include "AMateria.hpp"
+#include <iostream>
+class AMateria;
 class ICharacter
 {
     public:

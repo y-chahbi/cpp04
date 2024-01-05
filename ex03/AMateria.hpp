@@ -6,15 +6,17 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 09:52:00 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/04 12:49:32 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/05 11:38:10 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 #define AMATERIA_HPP
 
+#include "Character.hpp"
 #include <iostream>
-#include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {
@@ -26,8 +28,8 @@ class AMateria
         void    setType(std::string);
         std::string const & getType() const; //Returns the materia type
         virtual AMateria* clone() const = 0;
-        virtual void use(ICharacter& target);
-        ~AMateria();
+        virtual  void use(ICharacter& target);
+        virtual ~AMateria();
 };
 
 #endif

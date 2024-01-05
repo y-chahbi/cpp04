@@ -6,11 +6,12 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 13:03:21 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/04 17:02:27 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/05 10:42:44 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include "AMateria.hpp"
 
 Character::Character()
 {
@@ -87,6 +88,7 @@ void    Character::setEmpty(int j, int l)
         
 void Character::unequip(int idx)
 {
+    (void)idx;
     for (int i = 0; i < 4; i++)
     {
         if (getEmpty(i) == 1)
@@ -102,7 +104,7 @@ void Character::use(int idx, ICharacter& target)
 {
     if (idx < 4 && idx > -1)
     {
-        slot[idx]->use(target);
+            slot[idx]->use(target);
     }
 }
 

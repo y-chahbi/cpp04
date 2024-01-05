@@ -6,13 +6,19 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 09:52:06 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/04 10:23:29 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/05 11:41:17 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#include <iostream>
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
+#include "Cure.hpp"
 #include "IMateriaSource.hpp"
+#include "Ice.hpp"
+#include "MateriaSource.hpp"
+
 
 int main()
 {

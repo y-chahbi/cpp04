@@ -6,12 +6,12 @@
 #    By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/23 17:33:28 by ychahbi           #+#    #+#              #
-#    Updated: 2023/12/23 17:39:16 by ychahbi          ###   ########.fr        #
+#    Updated: 2024/01/05 11:35:47 by ychahbi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SUBJ = Animal
-SRC  = Animal.cpp main.cpp Cat.cpp Dog.cpp
+SUBJ = Materia
+SRC  = main.cpp AMateria.cpp Character.cpp ICharacter.cpp IMateriaSource.cpp  MateriaSource.cpp Cure.cpp Ice.cpp
 CC= c++
 FLAGS= -Wall -Wextra -Werror -std=c++98
 RM= rm -f
@@ -22,7 +22,7 @@ all: $(SUBJ)
 $(SUBJ): $(OBJ_ALL)
 	$(CC) $(FLAGS) $^ -o $@
 
-%.o: %.cpp Animal.hpp Cat.hpp Dog.hpp
+%.o: %.cpp AMateria.hpp Character.hpp Cure.hpp ICharacter.hpp IMateriaSource.hpp Ice.hpp MateriaSource.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

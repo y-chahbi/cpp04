@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 12:34:36 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/04 13:00:44 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/05 11:16:22 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Cure : public AMateria
         std::string const & getName() const;
         AMateria* clone() const;
         void use(ICharacter& target);
-        ~Cure();
+         ~Cure();
 };
 
 #endif
