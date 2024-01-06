@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:41 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/26 00:35:37 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/01 23:50:12 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::Dog(const Dog& Copy){ *this = Copy; }
 
 void    Dog::makeSound() const
 {
-    std::cout << "3aw" << std::endl;
+    std::cout << "Woof" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& Copy) {new(this) Dog(Copy);return (*this);}

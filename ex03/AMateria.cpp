@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 09:52:02 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/05 11:39:12 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/06 11:06:03 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,23 @@ std::string const & AMateria::getType() const
     return type;
 }
 
+AMateria &AMateria::operator=(const AMateria &Copy)
+{
+    if (this != &Copy)
+    {
+        this->setType(Copy.getType());
+    }
+    return (*this);
+}
+
+AMateria::AMateria(const AMateria &Copy)
+{
+    *this = Copy;
+}
+
 void AMateria::use(ICharacter& target)
 {
-    (void)target;
+    std::cout << "AMateria just called " << target.getName() << std::endl;
 }
 
 AMateria::~AMateria(){}

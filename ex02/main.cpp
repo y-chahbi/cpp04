@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 17:39:46 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/03 08:59:28 by ychahbi          ###   ########.fr       */
+/*   Created: 2023/12/21 13:31:07 by ychahbi           #+#    #+#             */
+/*   Updated: 2024/01/04 09:19:53 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
-
 #include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include "Brain.hpp"
 
-class Dog : virtual public Animal
+int main()
 {
-    private:
-        Brain   *DogBrain;
-    public:
-        Dog();
-        Dog(std::string);
-        Dog(const Dog& Copy);
-        Dog& operator=(const Dog& Copy);
-        void    makeSound() const;
-        const Brain   *getBrain() const;
-        ~Dog();
-};
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
 
-#endif
+    delete j;//should not create a leak
+    delete i;
+
+    return 0;
+}

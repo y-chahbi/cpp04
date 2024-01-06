@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 12:38:41 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/05 10:39:14 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/06 11:45:55 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Cure::Cure()
 {
-    name = "cure";
+    setType("cure");
 }
 
 void Cure::setName(std::string name)
 {
-    this->name = name;   
+    setType(name);
 }
 
 std::string const & Cure::getName() const
@@ -31,7 +31,22 @@ AMateria* Cure::clone() const
 {
     Cure *tmp;
     tmp = new Cure(*this);
+    tmp->setType(type);
     return (tmp);
+}
+
+Cure &Cure::operator=(const Cure &Copy)
+{
+    if (this != &Copy)
+    {
+        this->setName(Copy.getName());
+    }
+    return (*this);
+}
+
+Cure::Cure(const Cure &Copy)
+{
+    *this = Copy;
 }
 
 void Cure::use(ICharacter& target)

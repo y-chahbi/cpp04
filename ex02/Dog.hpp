@@ -1,14 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/04 10:10:51 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/04 10:11:57 by ychahbi          ###   ########.fr       */
+/*   Created: 2023/12/23 17:39:46 by ychahbi           #+#    #+#             */
+/*   Updated: 2024/01/03 08:59:28 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#ifndef DOG_HPP
+#define DOG_HPP
 
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Dog : virtual public Animal
+{
+    private:
+        Brain   *DogBrain;
+    public:
+        Dog();
+        Dog(std::string);
+        Dog(const Dog& Copy);
+        Dog& operator=(const Dog& Copy);
+        void    makeSound() const;
+        const Brain   *getBrain() const;
+        ~Dog();
+};
+
+#endif

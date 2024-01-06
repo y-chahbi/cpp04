@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:29:13 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/03 08:59:06 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/04 09:16:13 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ void  Animal::makeSound() const
 }
 
 Animal& Animal::operator=(const Animal& Copy) {
-    new(this) Animal(Copy);
+    if (this != &Copy){
+        this->setType(Copy.getType());
+    }
     return (*this);
 }
 

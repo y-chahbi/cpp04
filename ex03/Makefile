@@ -6,14 +6,14 @@
 #    By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/23 17:33:28 by ychahbi           #+#    #+#              #
-#    Updated: 2024/01/05 11:35:47 by ychahbi          ###   ########.fr        #
+#    Updated: 2024/01/06 08:48:08 by ychahbi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SUBJ = Materia
-SRC  = main.cpp AMateria.cpp Character.cpp ICharacter.cpp IMateriaSource.cpp  MateriaSource.cpp Cure.cpp Ice.cpp
+SRC  = main.cpp AMateria.cpp Character.cpp  MateriaSource.cpp Cure.cpp Ice.cpp
 CC= c++
-FLAGS= -Wall -Wextra -Werror -std=c++98
+FLAGS= -Wall -Wextra -Werror -std=c++98 -g
 RM= rm -f
 OBJ_ALL = $(SRC:.cpp=.o)
 

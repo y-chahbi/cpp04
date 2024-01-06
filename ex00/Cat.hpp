@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:49 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/26 00:14:36 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/02 01:37:26 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,21 @@ class Cat : virtual public Animal
         Cat& operator=(const Cat& Copy);
         virtual void    makeSound() const;
         ~Cat();
+};
+
+
+/***********************/
+
+class WrongCat : virtual public WrongAnimal
+{
+    private:
+    public:
+        WrongCat();
+        WrongCat(std::string);
+        WrongCat(const WrongCat& Copy);
+        WrongCat& operator=(const WrongCat& Copy);
+        void    makeSound() const;
+        ~WrongCat();
 };
 
 #endif

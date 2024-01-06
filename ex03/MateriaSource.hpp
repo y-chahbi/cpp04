@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 17:04:06 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/05 10:42:43 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/06 11:10:50 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ class MateriaSource : public IMateriaSource
         int         mpty[4];
     public:
         MateriaSource();
-        
-        void learnMateria(AMateria*);
-        void    setEmpty(int, int);
-        int     getEmpty();
+        MateriaSource(const MateriaSource &Copy);
+        MateriaSource &operator=(const MateriaSource &Copy);
+        void        learnMateria(AMateria*);
+        void        setEmpty(int, int);
+        int         getEmpty();
         AMateria*   getHold(int);
         void        setHold(AMateria*, int);
         AMateria*   createMateria(std::string const & type);
