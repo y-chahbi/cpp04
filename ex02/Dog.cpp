@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:41 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/02 15:37:43 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 13:22:42 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ const Brain   *Dog::getBrain() const {
 }
 
 Dog::~Dog() {
+    delete DogBrain;
     std::cout << "Dog Destructors Called" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:29:15 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/26 00:29:42 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 13:09:26 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Animal
 {
-    private:
+    protected:
         std::string type;
     public:
         Animal();

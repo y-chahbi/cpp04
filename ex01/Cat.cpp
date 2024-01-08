@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:44 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/02 15:38:39 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 13:08:39 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 Cat::Cat(){
     setType("Cat");
     CatBrain = new Brain;
-    std::cout << "Cat Constructors is Called" << std::endl;
+    std::cout << "Cat Constructor is Called" << std::endl;
 }
 
 Cat::Cat(std::string name) : Animal(name){
     setType("Cat");
+    std::cout << "Cat Param Constructor is Called" << std::endl;
     CatBrain = new Brain;
 }
 
@@ -47,5 +48,5 @@ const Brain   *Cat::getBrain() const {
 }
 
 Cat::~Cat() {
-    std::cout << "Cat Destructors Called" << std::endl;
+    std::cout << "Cat Destructor Called" << std::endl;
 }

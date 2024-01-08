@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:49 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/02 15:39:32 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 13:09:06 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Cat : virtual public Animal
 {
-    private:
+    protected:
         Brain   *CatBrain;
     public:
         Cat();

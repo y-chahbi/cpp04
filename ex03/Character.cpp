@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 13:03:21 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/06 13:08:57 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 15:35:02 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,10 @@ Character& Character::operator=(const Character& Copy)
         for (int i = 0; i < 4; i++)
         {
             this->empty[i] = Copy.getEmpty(i);
-            this->slot[i]  = Copy.getSlot(i);
+            if (Copy.getSlot(i))
+                this->slot[i]  = Copy.getSlot(i)->clone();
+            else
+                this->slot[i]  = NULL;
             this->setName(Copy.getName());
         }
     }
@@ -74,9 +77,9 @@ void Character::equip(AMateria* m)
 {
     for (int i = 0; i < 4; i++)
     {
-        if (getEmpty(i) == 0)
+        if (getEmpty(i) == 0 && m)
         {
-            slot[i] = m;
+            slot[i] = m->clone();
             setEmpty(i, 1);
             break;
         }
@@ -106,5 +109,6 @@ void Character::use(int idx, ICharacter& target)
         
 Character::~Character()
 {
-    
+    for (int i = 0; i < 4; i++)
+        delete slot[i];
 }

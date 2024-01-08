@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:44 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/02 15:38:39 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 13:22:59 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ const Brain   *Cat::getBrain() const {
 }
 
 Cat::~Cat() {
+    delete CatBrain;
     std::cout << "Cat Destructors Called" << std::endl;
 }

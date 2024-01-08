@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:31:07 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/02 15:41:35 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 13:13:55 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ int main()
 
     delete j;//should not create a leak
     delete i;
-
     return 0;
 }

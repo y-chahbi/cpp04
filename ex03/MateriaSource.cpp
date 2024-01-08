@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 17:04:02 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/06 11:46:10 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 15:22:18 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ MateriaSource::MateriaSource()
 void MateriaSource::setHold(AMateria* mt, int i)
 {
     AMateria*   tmp = mt->clone();
-    //std::cout << tmp << " | " << mt << " | " << tmp->getType() << "|" << mt->getType() << std::endl;
     hold[i] = tmp;
 }
 
@@ -51,7 +50,10 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &Copy)
     {
         for (int i = 0; i < 4; i++)
         {
-            this->hold[i] = Copy.hold[i];
+            if (Copy.hold[i])
+                this->hold[i] = Copy.hold[i]->clone();
+            else
+                this->hold[i] = NULL;
             this->mpty[i] = Copy.mpty[i];
         }
     }
@@ -69,9 +71,13 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     {
         AMateria *tmp = hold[i];
         if (tmp && tmp->getType() == type)
-            return (tmp);
+            return (tmp->clone());
     }
     return (0);
 }
 
-MateriaSource::~MateriaSource(){}
+MateriaSource::~MateriaSource()
+{
+    for (int i = 0; i < 4; i++)
+        delete hold[i];
+}

@@ -6,15 +6,19 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:29:13 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/03 08:59:06 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 13:14:35 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() {}
+Animal::Animal() {
+    std::cout << "Animal Destructors Called" << std::endl;
+}
 
-Animal::Animal(std::string type) : type(type){};
+Animal::Animal(std::string type) : type(type){
+    std::cout << "Animal Destructors Called" << std::endl;
+};
 
 const std::string& Animal::getType() const
 {
@@ -35,7 +39,7 @@ void  Animal::makeSound() const
 }
 
 Animal& Animal::operator=(const Animal& Copy) {
-    new(this) Animal(Copy);
+    this->setType(Copy.getType());
     return (*this);
 }
 

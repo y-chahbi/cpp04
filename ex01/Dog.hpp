@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:46 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/03 08:59:28 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/08 13:09:12 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Dog : virtual public Animal
 {
-    private:
+    protected:
         Brain   *DogBrain;
     public:
         Dog();
