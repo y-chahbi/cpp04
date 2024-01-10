@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:49 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 13:09:06 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 10:45:50 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ class Cat : virtual public Animal
         Cat(const Cat& Copy);
         Cat& operator=(const Cat& Copy);
 
-        const Brain   *getBrain() const;
-
-        void    makeSound() const;
+        const Brain     *getBrain() const;
+        void            setBrain(Brain *);
+        void            makeSound() const;
         ~Cat();
 };
 

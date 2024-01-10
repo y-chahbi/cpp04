@@ -6,22 +6,24 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:44 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 12:56:59 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 09:49:50 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat(){
-    std::cout << "Cat Constructors is Called" << std::endl;
     setType("Cat");
+    std::cout << "Cat Constructors is Called" << std::endl;
 }
 
 Cat::Cat(std::string name) : Animal(name){
     std::cout << "Cat Param Constructors is Called" << std::endl;
 }
 
-Cat::Cat(const Cat& Copy){ *this = Copy; }
+Cat::Cat(const Cat& Copy){
+    *this = Copy;
+}
 
 void    Cat::makeSound() const
 {

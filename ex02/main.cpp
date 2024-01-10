@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:31:07 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 13:23:53 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 11:09:28 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,54 @@
 
 int main()
 {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    // const Animal* j = new Dog();
+    // const Animal* i = new Cat();
+    // delete j;//should not create a leak
+    // delete i;
 
-    delete j;//should not create a leak
-    delete i;
-    return 0;
+
+    /******************************/
+    
+    // Animal  *Arry[100];
+    // for (int i = 0; i < 100; i++)
+    // {
+    //     if (i < 50)
+    //         Arry[i] = new Cat();
+    //     else
+    //         Arry[i] = new Dog();
+    // }
+    
+    // for (int i = 0; i < 100; i++)
+    //     delete Arry[i];
+    
+    /******************************/
+
+    // Brain *lus = new Brain();
+    
+    // for (int i = 0; i < 100; i++)
+    //     lus->setIdea("brain", i);
+    // std::cout << lus->getIdea(30) << std::endl;
+    // delete lus;
+
+    /*****************************/
+
+    // Cat     *hello = new Cat();
+    // Brain   *min = new Brain();
+    
+    // for (int i = 0; i < 100; i++)
+    //     min->setIdea("My barin", i);
+    
+    // hello->setBrain(min);
+    
+    // const Brain *tmp = hello->getBrain();
+    // std::cout << tmp->getIdea(56);
+    
+    // delete hello;
+    // delete min;
+
+    /*****************************/
+
+    //Animal test;
+
+    return (0);
 }

@@ -6,18 +6,19 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:29:13 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 13:14:35 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 10:19:49 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal() {
-    std::cout << "Animal Destructors Called" << std::endl;
+    setType("Animal");
+    std::cout << "Animal Constructor Called" << std::endl;
 }
 
 Animal::Animal(std::string type) : type(type){
-    std::cout << "Animal Destructors Called" << std::endl;
+    std::cout << "Animal Constructor Called" << std::endl;
 };
 
 const std::string& Animal::getType() const

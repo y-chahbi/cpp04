@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 00:40:19 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 13:12:38 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 10:35:23 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,18 @@ Brain& Brain::operator=(const Brain& Copy) {
 }
 
 std::string Brain::getIdea(int index) const {
-    return this->ideas[index];
+    if (index >= 0 && index < 100)
+        return this->ideas[index];
+    else
+        return ((std::cout << "The index " << index << " must be in this Rang (0 to 100)"
+            << " So that the return will be the First idea" << std::endl), this->ideas[0]);
 }
 
 void    Brain::setIdea(std::string idea, int index) {
-    this->ideas[index] = idea;
+    if (index >= 0 && index < 100)
+        this->ideas[index] = idea;
+    else
+        std::cout << idea << " Didn't set because of the index " << index << " must be in this Rang (0 to 100)" << std::endl;
 }
 
 Brain::~Brain(){

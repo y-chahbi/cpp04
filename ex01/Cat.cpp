@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:44 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 13:08:39 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 11:01:40 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Cat::Cat(const Cat& Copy) : Animal(){
 
 void    Cat::makeSound() const
 {
-    std::cout << "3aw" << std::endl;
+    std::cout << "Meaw" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& Copy) {
@@ -47,6 +47,15 @@ const Brain   *Cat::getBrain() const {
     return this->CatBrain;
 }
 
+void    Cat::setBrain(Brain *tmp) {
+    delete CatBrain;
+    CatBrain = new Brain();
+    for (int i = 0; i < 100; i++) {
+        CatBrain->setIdea(tmp->getIdea(i), i);
+    }
+}
+
 Cat::~Cat() {
+    delete CatBrain;
     std::cout << "Cat Destructor Called" << std::endl;
 }

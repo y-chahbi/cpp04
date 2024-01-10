@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:41 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 13:08:10 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 11:02:07 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Dog::Dog(const Dog& Copy) : Animal(){
 
 void    Dog::makeSound() const
 {
-    std::cout << "3aw" << std::endl;
+    std::cout << "Woof" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& Copy) {
@@ -43,10 +43,19 @@ Dog& Dog::operator=(const Dog& Copy) {
     return (*this);
 }
 
+void    Dog::setBrain(Brain *tmp) {
+    delete DogBrain;
+    DogBrain = new Brain();
+    for (int i = 0; i < 100; i++) {
+        DogBrain->setIdea(tmp->getIdea(i), i);
+    }
+}
+
 const Brain   *Dog::getBrain() const {
     return this->DogBrain;
 }
 
 Dog::~Dog() {
+    delete DogBrain;
     std::cout << "Dog Destructor Called" << std::endl;
 }

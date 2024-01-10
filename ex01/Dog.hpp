@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:39:46 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 13:09:12 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 10:57:11 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ class Dog : virtual public Animal
         Dog(std::string);
         Dog(const Dog& Copy);
         Dog& operator=(const Dog& Copy);
-        void    makeSound() const;
-        const Brain   *getBrain() const;
+
+        const Brain     *getBrain() const;
+        void            setBrain(Brain *);
+        void            makeSound() const;
         ~Dog();
 };
 

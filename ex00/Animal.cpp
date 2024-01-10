@@ -6,13 +6,14 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:29:13 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 12:53:01 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 08:55:02 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal() {
+    setType("Animal");
     std::cout << "Animal Constructors Called" << std::endl;
 }
 

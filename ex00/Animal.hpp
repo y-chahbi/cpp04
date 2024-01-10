@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:29:15 by ychahbi           #+#    #+#             */
-/*   Updated: 2024/01/08 12:50:14 by ychahbi          ###   ########.fr       */
+/*   Updated: 2024/01/10 08:54:40 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Animal
         Animal(std::string);
         Animal(const Animal& Copy);
         Animal& operator=(const Animal& Copy);
-        void                setType(std::string);
+        void            setType(std::string);
         const virtual std::string& getType() const;
         virtual void    makeSound() const;
         virtual ~Animal();
